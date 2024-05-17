@@ -39,5 +39,6 @@ return [
         'base_url' => env('TRACKTIK_BASE_URL', 'https://smoke.staffr.net'),
         'client_id' => env('TRACKTIK_CLIENT_ID', ''),
         'client_secret' => env('TRACKTIK_CLIENT_SECRET', ''),
+        'access_token' => env('TRACKTIK_ACCESS_TOKEN', '')
     ]
 ];
