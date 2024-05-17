@@ -1,5 +1,8 @@
 <?php
 
+use App\Handlers\EmployeeProviders\Provider1;
+use App\Handlers\EmployeeProviders\Provider2;
+
 return [
 
     /*
@@ -122,5 +125,10 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+    'employee_provider_handlers' => [
+        'provider1' => Provider1::class,
+        'provider2' => Provider2::class
+    ]
 
 ];
