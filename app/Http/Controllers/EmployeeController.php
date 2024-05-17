@@ -62,7 +62,7 @@ class EmployeeController extends Controller
                     'errors' => $validator->errors()->toArray()
                 ], 422);
             }
-            $trackTikPayload = $employeeProvider->toTrackTikPayload();
+            $trackTikPayload = $employeeProvider->toTrackTikPayload($request->input());
             dispatch(new SyncEmployeeToTrackTik($trackTikPayload, $provider));
         } catch (\Throwable $th) {
             report($th);

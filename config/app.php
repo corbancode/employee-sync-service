@@ -126,6 +126,10 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+     * Employee Provider Handlers are responsible for handling events for different employee providers.
+     * Employee Provider Handlers should implement App\Interfaces\EmployeeProviderInterface.
+     */
     'employee_provider_handlers' => [
         'provider1' => Provider1::class,
         'provider2' => Provider2::class
